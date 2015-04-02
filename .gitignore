@@ -52,3 +52,5 @@ crashlytics-build.properties
 composer.phar
 vendor
 composer.lock
+bower_components
+node_modules

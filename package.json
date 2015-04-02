@@ -1,0 +1,23 @@
+{
+  "name": "test",
+  "version": "0.0.0",
+  "description": "'new project'",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/slavatour/test_php.git"
+  },
+  "author": "me",
+  "license": "mit",
+  "bugs": {
+    "url": "https://github.com/slavatour/test_php/issues"
+  },
+  "homepage": "https://github.com/slavatour/test_php",
+  "dependencies": {
+    "bower": "latest"
+  }
+
+}
