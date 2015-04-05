@@ -16,7 +16,7 @@
     "url": "https://github.com/slavatour/test_php/issues"
   },
   "homepage": "https://github.com/slavatour/test_php",
-  "dependencies": {
+  "devDependencies": {
     "bower": "latest"
   }
 

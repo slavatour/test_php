@@ -1,28 +1,34 @@
-<!DOCTYPE html>
+<?php
+    define('MAIN_PATH', 'test_php');
+?>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <!--    <link rel="icon" href="../../favicon.ico">-->
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./public/libs/zurb-foundation/css/normalize.css"/>
+    <link rel="stylesheet" href="./public/libs/zurb-foundation/css/foundation.min.css"/>
+    <link rel="stylesheet" href="./public/css/style.css"/>
+</head>
+<body>
 
-        <title>Faundation Tamplate</title>
+<!--  header  -->
+    <?php include('public/templates/header.php'); ?>
 
-        <link rel="stylesheet" href="./public/libs/zurb-foundation/css/normalize.css"/>
-        <link rel="stylesheet" href="./public/libs/zurb-foundation/css/foundation.min.css"/>
-    </head>
-    <body>
-        <?php include('public/templates/header.php'); ?>
+<!--  content  -->
+    <?php include('public/templates/content.php'); ?>
 
-        <?php include('public/templates/slider.php'); ?>
+<!--  social  -->
+    <?php include('public/templates/social.php'); ?>
 
-        <?php include('public/templates/content.php'); ?>
+<!--  footer  -->
+    <?php include('public/templates/footer.php'); ?>
 
-        <?php include('public/templates/footer.php'); ?>
-
-        <script src="./public/libs/zurb-foundation/js/vendor/jquery.js"></script>
-        <script src="./public/libs/zurb-foundation/js/foundation.min.js"></script>
-    </body>
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="./bower_components/foundation/js/vendor/modernizr.js"></script>
+    <script src="./public/libs/zurb-foundation/js/foundation.min.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+</body>
 </html>
