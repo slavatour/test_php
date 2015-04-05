@@ -1,0 +1,14 @@
+.blog-content {
+    padding: 20px 0px 30px 0px;
+}
+.blog-content .blog-item {
+    margin: 30px 0px;
+}
+
+.blog-content .blog-item p {
+    text-align: justify;
+}
+
+.blog-content .blog-item h3 {
+    text-align: left;
+}

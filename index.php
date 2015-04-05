@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./public/libs/zurb-foundation/css/normalize.css"/>
     <link rel="stylesheet" href="./public/libs/zurb-foundation/css/foundation.min.css"/>
     <link rel="stylesheet" href="./public/css/style.css"/>
+    <link rel="stylesheet" href="./public/css/common.css"/>
 </head>
 <body>
 
