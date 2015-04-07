@@ -10,8 +10,8 @@
     }
   ],
   "require": {
-    "twbs/bootstrap": "3.3.*@dev",
     "zurb/foundation": "dev-master",
-    "components/jquery": "dev-master"
+    "components/jquery": "dev-master",
+    "twig/twig": "dev-master"
   }
 }
