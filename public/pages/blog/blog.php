@@ -10,9 +10,8 @@
     <link rel="stylesheet" href="public/css/common.css"/>
 </head>
 <body>
-
-<!--  header  -->
 <?php include('public/templates/header_blog.php'); ?>
+    <h1>{{foo}}</h1>
 
 <!--  content  -->
 <?php include('public/templates/blog/content.php'); ?>

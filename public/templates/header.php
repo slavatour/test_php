@@ -10,7 +10,7 @@
                         <ul class="button-group even-6">
                             <li><a href="<?php echo('index.php') ?>" class="button">Home</a></li>
                             <li><a href="<?php echo('index.php') ?>" class="button">Shop</a></li>
-                            <li><a href="<?php echo('index-blog.php') ?>" class="button">Blog</a></li>
+                            <li><a href="<?php echo('blog.php') ?>" class="button">Blog</a></li>
                             <li><a href="<?php echo('index.php') ?>" class="button">Discussion</a></li>
                             <li><a href="<?php echo('index.php') ?>" class="button">FAQ</a></li>
                             <li><a href="<?php echo('index.php') ?>" class="button">Contact</a></li>
