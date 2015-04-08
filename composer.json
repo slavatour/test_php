@@ -10,7 +10,8 @@
     }
   ],
   "require": {
-    "zurb/foundation": "dev-master",
+    "twbs/bootstrap": "dev-master",
+    "thomaspark/bootswatch": "3.3.4+1",
     "components/jquery": "dev-master",
     "twig/twig": "dev-master"
   }
