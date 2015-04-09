@@ -5,8 +5,8 @@ class db {
     private static $mysqli = null;
 
     const HOST = 'localhost';
-    const USER = 'test-user';
-    const PASSWORD = 'fCRyyZu7HC9dX4fc';
+    const USER = 'root';
+    const PASSWORD = '';
     const BASE_NAME = 'test_db';
 
     private function __construct () {
@@ -27,5 +27,18 @@ class db {
             self::$mysqli = $db->_db;
         }
         return self::$mysqli;
+    }
+
+    public function getQuery($string) {
+        return self::$mysqli->query($string);
+    }
+
+    public function getResult($query) {
+        $rows = array();
+        $row = null;
+        do {
+            if (is_array($row)) $rows[] = $row;
+        } while ($row = $query->fetch_assoc());
+        return $rows;
     }
 }
