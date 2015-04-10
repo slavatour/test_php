@@ -1,13 +1,17 @@
 <?php
+/*
+ * Singleton wrapper for mysqli class
+ * */
+
 
 class db {
     private $_db;
     private static $mysqli = null;
 
-    const HOST = 'localhost';
-    const USER = 'root';
-    const PASSWORD = '';
-    const BASE_NAME = 'test_db';
+    const HOST = HOST;
+    const USER = USER;
+    const PASSWORD = PASSWORD;
+    const BASE_NAME = BASE_NAME;
 
     private function __construct () {
         $ob_mysqli = new mysqli(self::HOST, self::USER, self::PASSWORD, self::BASE_NAME);
@@ -29,7 +33,7 @@ class db {
         return self::$mysqli;
     }
 
-    public function getQuery($string) {
+    public function query($string) {
         return self::$mysqli->query($string);
     }
 

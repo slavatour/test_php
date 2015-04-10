@@ -1,13 +1,17 @@
 <?php
 
+require_once 'app-config.php';
+require_once 'includes/app.php';
 require_once 'vendor/autoload.php';
-require_once 'includes/db.class.php';
+require_once 'includes/db.php';
+
+$app = new app();
 
 /*
  * Get data from database
  * */
 $db = db::getConnection();
-$query = db::getQuery('SELECT * FROM content;');
+$query = db::query('SELECT * FROM content;');
 $rows = db::getResult($query);
 
 /*
