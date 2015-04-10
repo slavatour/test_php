@@ -1,86 +1,62 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-            <ul class="nav nav-sidebar">
-                <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Reports</a></li>
-                <li><a href="#">Analytics</a></li>
-                <li><a href="#">Export</a></li>
-            </ul>
-            <ul class="nav nav-sidebar">
-                <li><a href="">Nav item</a></li>
-                <li><a href="">Nav item again</a></li>
-                <li><a href="">One more nav</a></li>
-                <li><a href="">Another nav item</a></li>
-                <li><a href="">More navigation</a></li>
-            </ul>
-            <ul class="nav nav-sidebar">
-                <li><a href="">Nav item again</a></li>
-                <li><a href="">One more nav</a></li>
-                <li><a href="">Another nav item</a></li>
-            </ul>
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h1 class="page-header">Dashboard</h1>
+
+    <div class="row placeholders">
+        <div class="col-xs-6 col-sm-3 placeholder">
+            <img src="public/images/block-main.jpg" data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
+            <h4>Label</h4>
+            <span class="text-muted">Something else</span>
         </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <h1 class="page-header">Dashboard</h1>
-
-            <div class="row placeholders">
-                <div class="col-xs-6 col-sm-3 placeholder">
-                    <img src="public/images/block-main.jpg" data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
-                    <h4>Label</h4>
-                    <span class="text-muted">Something else</span>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder">
-                    <img src="public/images/block-main_2.jpg" data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
-                    <h4>Label</h4>
-                    <span class="text-muted">Something else</span>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder">
-                    <img src="public/images/block-main_3.jpg" data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
-                    <h4>Label</h4>
-                    <span class="text-muted">Something else</span>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder">
-                    <img src="public/images/block-main.jpg" data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
-                    <h4>Label</h4>
-                    <span class="text-muted">Something else</span>
-                </div>
-            </div>
-
-            <h2 class="sub-header">
-                Section title
-                <button type="button" class="btn btn-default btn-sm pull-right" data-toggle="modal" data-target="#myModal">
-                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> add new
-                </button>
-            </h2>
-            <div class="table-responsive">
-                <table class="table table-striped table-hover">
-                    <thead>
-                    <tr>
-                        {% for key in products[0]|keys %}
-                            <th>{{ key }}</th>
-                        {% endfor %}
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {% for product in products %}
-                        <tr>
-                            <td>{{ product.id }}</td>
-                            <td class="col-sm-1">
-                                <a href="#" class="thumbnail col-sm-6" style="margin-bottom: 0px">
-                                    <img src="{{ product.photo }}" alt="{{ product.name }}">
-                                </a>
-                            </td>
-                            <td>{{ product.name }}</td>
-                            <td>{{ product.description }}</td>
-                            <td>{{ product.category }}</td>
-                            <td>{{ product.price }}</td>
-                        </tr>
-                    {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-            {% import 'common/modal.html' as macro %}
-            {{ macro.modal('myModal', 'Title modal') }}
+        <div class="col-xs-6 col-sm-3 placeholder">
+            <img src="public/images/block-main_2.jpg" data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
+            <h4>Label</h4>
+            <span class="text-muted">Something else</span>
+        </div>
+        <div class="col-xs-6 col-sm-3 placeholder">
+            <img src="public/images/block-main_3.jpg" data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
+            <h4>Label</h4>
+            <span class="text-muted">Something else</span>
+        </div>
+        <div class="col-xs-6 col-sm-3 placeholder">
+            <img src="public/images/block-main.jpg" data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
+            <h4>Label</h4>
+            <span class="text-muted">Something else</span>
         </div>
     </div>
+
+    <h2 class="sub-header">
+        Section title
+        <button type="button" class="btn btn-default btn-sm pull-right" data-toggle="modal" data-target="#myModal">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> add new
+        </button>
+    </h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <thead>
+            <tr>
+                {% for key in products[0]|keys %}
+                    <th>{{ key }}</th>
+                {% endfor %}
+            </tr>
+            </thead>
+            <tbody>
+            {% for product in products %}
+                <tr>
+                    <td>{{ product.id }}</td>
+                    <td class="col-sm-1">
+                        <a href="#" class="thumbnail col-sm-6" style="margin-bottom: 0px">
+                            <img src="{{ product.photo }}" alt="{{ product.name }}">
+                        </a>
+                    </td>
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.description }}</td>
+                    <td>{{ product.category }}</td>
+                    <td>{{ product.price }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% import 'index/modal.html' as macro %}
+    {{ macro.modal('myModal') }}
 </div>

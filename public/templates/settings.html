@@ -1,18 +1,18 @@
 {# extend pages skeleton #}
 {% extends 'page.html' %}
 
-{% block title %}index page{% endblock %}
+{% block title %}sittings page{% endblock %}
 
 {% block header %}
     {% include 'common/header.html' %}
 {% endblock %}
 
 {% block content %}
-{% include 'common/top-nav.html' with {'dashboard': 'active'} %}
+    {% include 'common/top-nav.html' with {'settings': 'active'} %}
     <div class="container-fluid">
         <div class="row">
             {% include 'common/side-bar.html' %}
-            {% include 'index/content.html' %}
+            {% include 'settings/content.html' %}
         </div>
     </div>
 {% endblock %}
