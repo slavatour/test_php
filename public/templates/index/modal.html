@@ -7,33 +7,42 @@
                     <h4 class="modal-title" id="myModalLabel">Add new product</h4>
                 </div>
                 <div class="modal-body">
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" id="productForm" action="index.php" method="put">
                         <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                            <label for="inputName" class="col-sm-2 control-label">Name</label>
                             <div class="col-sm-10">
-                                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                                <input type="text" class="form-control" id="inputName" name="name" placeholder="name" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                            <label for="inputCategory" class="col-sm-2 control-label">Category</label>
                             <div class="col-sm-10">
-                                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                                <input type="text" class="form-control" id="inputCategory" name="category" placeholder="category" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox"> Remember me
-                                    </label>
-                                </div>
+                            <label for="inputPrice" class="col-sm-2 control-label">Price</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="inputPrice" name="price" placeholder="price" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPhoto" class="col-sm-2 control-label">Url photo</label>
+                            <div class="col-sm-10">
+                                <input type="url" class="form-control" id="inputPhoto" name="photo" placeholder="photo url">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputDesc" class="col-sm-2 control-label">Description</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" id="inputDesc" name="description" placeholder="description"></textarea>
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary" form="productForm">Submit</button>
                 </div>
             </div>
         </div>

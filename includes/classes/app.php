@@ -1,5 +1,5 @@
 <?php
-require_once 'db.php';
+require_once 'includes/classes/db.php';
 
 class app {
     private $_app = null;

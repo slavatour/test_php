@@ -2,8 +2,6 @@
 /*
  * Singleton wrapper for mysqli class
  * */
-
-
 class db {
     private $_db;
     private static $mysqli = null;
@@ -25,7 +23,7 @@ class db {
         }
     }
 
-    public function getConnection() {
+    public static function getConnection() {
         if(self::$mysqli == null) {
             $db = new db();
             self::$mysqli = $db->_db;
@@ -33,11 +31,11 @@ class db {
         return self::$mysqli;
     }
 
-    public function query($string) {
+    public static function query($string) {
         return self::$mysqli->query($string);
     }
 
-    public function getResult($query) {
+    public static function getResult($query) {
         $rows = array();
         $row = null;
         do {
